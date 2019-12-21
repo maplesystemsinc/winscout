@@ -1,6 +1,6 @@
 @echo off
 
-title Winscout Diagnoser
+title Maple Systems Winscout Diagnoser
 
 REM   __    __ _       __                 _   
 REM  / / /\ \ (_)_ __ / _\ ___ ___  _   _| |_ 
@@ -10,10 +10,10 @@ REM    \/  \/ |_|_| |_\__/\___\___/ \__,_|\__|
 REM                                           
 REM  Main Program: winscout-full.bat
 REM  Helper Files: winscout-main.bat, tee.bat
-REM  Winscout Diagnostic Script
+REM  Maple Systems Winscout Diagnostic Script
 REM  Description: This batch file captures OS, hardware, and networking configuration/status.
 REM  Author: Adam Anderson
-REM  Code Repo: https://github.com/84adam/winscout
+REM  Code Repo: https://github.com/maplesystemsinc/winscout
 
 REM Horizontal Rules:
 set x=##########
