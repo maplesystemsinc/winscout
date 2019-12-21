@@ -6,7 +6,7 @@
 
 **Instructions:**
 
-- [Download](https://github.com/84adam/winscout/archive/master.zip) and unzip the archive.
+- [Download](https://github.com/maplesystemsinc/winscout/archive/master.zip) and unzip the archive.
 - Open `CMD` as an Administrator, then run **`winscout-full.bat`**
 - **REQUIRED**: **`winscout-main.bat`** and **`tee.bat`** must be in the same directory prior to running the script.
 - The script should take 1-2 minutes to complete if you skip `sfc /verifynow` (system file check).
