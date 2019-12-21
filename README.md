@@ -1,4 +1,4 @@
-# Winscout
+# Maple Systems Winscout
 
 ***Windows PC Diagnostic Utility***
 
