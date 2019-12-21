@@ -1,7 +1,7 @@
 @echo off
 @setlocal
 
-title Winscout Diagnoser/Helper Utility
+title Maple Systems Winscout Diagnoser/Helper Utility
 
 REM   __    __ _       __                 _   
 REM  / / /\ \ (_)_ __ / _\ ___ ___  _   _| |_ 
@@ -11,10 +11,10 @@ REM    \/  \/ |_|_| |_\__/\___\___/ \__,_|\__|
 REM                                           
 REM  Main Program: winscout-full.bat
 REM  Helper Files: winscout-main.bat, tee.bat
-REM  Winscout Diagnostic Script
+REM  Maple Systems Winscout Diagnostic Script
 REM  Description: This script tracks running time and saves output from `winscout-main.bat`
 REM  Author: Adam Anderson
-REM  Code Repo: https://github.com/84adam/winscout
+REM  Code Repo: https://github.com/maplesystemsinc/winscout
 
 REM Horizontal Rules:
 set x=##########
@@ -23,6 +23,46 @@ set y=----------
 set y=%y%%y%%y%%y%%y%%y%%y%%y%
 set z=__________
 set z=%z%%z%%z%%z%%z%%z%%z%%z%
+
+ECHO ###############################################################################
+ECHO #              MAPLE SYSTEMS WINSCOUT END-USER LICENSE AGREEMENT              #
+ECHO #      PLEASE READ AND ACCEPT THE TERMS OF THE EULA PRIOR TO PROCEEDING       #
+ECHO ###############################################################################
+ECHO # THE USER OF MAPLE SYSTEMS WINSCOUT (MSW), AS DEVELOPED BY MAPLE SYSTEMS,    #
+ECHO # INC., HEREBY ACKNOWLEDGES, AND AGREES TO THE FOLLOWING:                     #
+ECHO # --------------------------------------------------------------------------- #
+ECHO # (1) THE USER UNDERSTANDS THAT USING THIS SCRIPT MAY CAUSE UNWANTED,         #
+ECHO # ( ) UNINTENTIONAL, AND/OR ADVERSE RESULTS RELATED TO ANY SYSTEMS ON WHICH   #
+ECHO # ( ) THE SCRIPT IS RUN, AND/OR TO ANY OTHER SYSTEMS CONNECTED TO SAID        #
+ECHO # ( ) SYSTEM.                                                                 #
+ECHO # (2) MAPLE SYSTEMS, INC. BEARS NO LIABILITY OR RESPONSIBILITY FOR ANY DATA   #
+ECHO # ( ) LOSS, DEGRADATION OF PERFORMANCE, SYSTEM INSTABILITY, OR SYSTEM FAILURE #
+ECHO # ( ) AS A RESULT OF THE INSTALLATION OR EXECUTION OF MSW.                    #
+ECHO # (3) MAPLE SYSTEMS, INC. DOES NOT WARRANT ANY SPECIFIC LEVEL OF PERFORMANCE  #
+ECHO # ( ) PERTAINING TO MSW.                                                      #
+ECHO # (4) MSW IS NOT INTENDED TO BE USED FOR PERFORMANCE TUNING.                  #
+ECHO # (5) THE USER AGREES TO HOLD HARMLESS MAPLE SYSTEMS, INC. RELATED TO ANY     #
+ECHO # ( ) POTENTIAL ADVERSE EFFECTS OCCURRING AS A RESULT OF THE INSTALLATION OR  #
+ECHO # ( ) EXECUTION OF MSW.                                                       #
+ECHO ###############################################################################
+
+:Ask
+echo Please type 'Y' to agree to the EULA above and run the script.
+echo Or type 'N' to cancel and exit.
+set INPUT=
+set /P INPUT=Type input: %=%
+if /I "%INPUT%"=="y" goto begin
+if /I "%INPUT%"=="n" goto cancel
+echo Please select 'Y'/'N': & goto Ask
+:begin
+echo Beginning diagnosis...
+echo %y%
+goto cont
+:cancel
+echo Exiting now...
+echo %y%
+goto endprogram
+:cont
 
 REM timestamp
 for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do set "dt=%%a"
@@ -109,3 +149,4 @@ echo %x%
 echo.
 
 pause
+:endprogram
