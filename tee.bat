@@ -12,11 +12,10 @@
 ::                                        
 ::  Main Program: winscout-full.bat
 ::  Helper Files: winscout-main.bat, tee.bat
-::  Winscout Diagnostic Script
+::  Maple Systems Winscout Diagnostic Script
 ::  Description: This batch file echoes output while also saving it to a specified file.
-::  Winscout Author: Adam Anderson
-::  Code Repo: https://github.com/84adam/winscout
-::  
+::  Maple Systems Winscout Author: Adam Anderson
+::  Code Repo: https://github.com/maplesystemsinc/winscout
 
 @echo off
 cscript //E:JScript //nologo "%~f0" %*
